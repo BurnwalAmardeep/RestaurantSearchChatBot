@@ -1,0 +1,114 @@
+actions:
+- action_check_service_availability
+- action_search_restaurants
+- action_send_email_topten
+- utter_ask_budget
+- utter_ask_cuisine
+- utter_ask_email_id
+- utter_ask_email_topten
+- utter_ask_location
+- utter_confirm_inputs
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+entities:
+- cuisine
+- email_id
+- location
+- pincode
+- price
+intents:
+- restaurant_search
+- budget
+- affirm
+- get_location
+- give_emailid
+- greet
+- deny
+- goodbye
+- mood_great
+- mood_unhappy
+- bot_challenge
+- budget_confirm
+- affirm+give_emailid
+- deny+restaurant_search
+- get_location+restaurant_search
+responses:
+  utter_ask_budget:
+  - buttons:
+    - payload: <300
+      title: Lesser than Rs 300
+    - payload: 300-700
+      title: Rs 300 to Rs 700
+    - payload: '>700'
+      title: More than 700
+    text: What price range are you looking at?
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Mexican
+      title: Mexican
+    - payload: Italian
+      title: Italian
+    - payload: American
+      title: American
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    text: What cuisine do you prefer?
+  utter_ask_email_id:
+  - text: Please help me out with your email id?
+  utter_ask_email_topten:
+  - text: Should I send you details of all the restaurants on email?
+  utter_ask_location:
+  - text: Which city are you located?
+  - text: Can you please help with the city name?
+  - text: I will need your city name to find the restaurants.
+  utter_confirm_inputs:
+  - text: You are looking for restaurants in {location} for {cuisine} cuisine in range
+      {price}. Is it correct?
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: I hope you found your restaurant.
+  - text: Is that all?
+  - text: That's what you need. Right?
+  utter_goodbye:
+  - text: Bye
+  - text: Tada
+  - text: Bah bye
+  - text: See you :)
+  - text: Sayonara :)
+  - text: Bye...Miss me :)
+  utter_greet:
+  - text: Hey! I am Lisa. How are you?
+  - text: Hi there! I am Lisa,your assistant. How may I help you?
+  - text: I am Lisa. Nice to meet you. :)
+  - text: Hey! Lisa here. How are you?
+  utter_happy:
+  - text: Great! I am here to help you find restaurants based on your cuisine and
+      location of your choice.
+  - text: Awesome! So tell me what would you like to have today.
+  - text: Good to hear. How can I help to find your favourite restaurant?
+  utter_iamabot:
+  - text: I am Lisa, your personal digital assistant.
+  - text: I am a bot named Lisa. I am your assistant.
+  - text: Lisa, the bot.
+  - text: This is Lisa, your assistant, at your service.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60.0
+slots:
+  cuisine:
+    type: text
+  email_id:
+    type: text
+  location:
+    type: text
+  pincode:
+    type: text
+  price:
+    type: text
