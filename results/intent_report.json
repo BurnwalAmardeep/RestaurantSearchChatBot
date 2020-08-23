@@ -1,11 +1,4 @@
 {
-  "budget": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
   "give_emailid": {
     "precision": 1.0,
     "recall": 1.0,
@@ -13,48 +6,11 @@
     "support": 9,
     "confused_with": {}
   },
-  "greet": {
+  "budget": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "get_location": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 16,
-    "confused_with": {}
-  },
-  "mood_unhappy": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "bot_challenge": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "affirm": {
-    "precision": 1.0,
-    "recall": 0.9285714285714286,
-    "f1-score": 0.962962962962963,
-    "support": 14,
-    "confused_with": {
-      "mood_great": 1
-    }
-  },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
+    "support": 7,
     "confused_with": {}
   },
   "mood_great": {
@@ -71,29 +27,73 @@
     "support": 8,
     "confused_with": {}
   },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "mood_unhappy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "get_location": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16,
+    "confused_with": {}
+  },
   "restaurant_search": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 42,
+    "support": 41,
     "confused_with": {}
   },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.962962962962963,
+    "support": 14,
+    "confused_with": {
+      "mood_great": 1
+    }
+  },
   "micro avg": {
-    "precision": 0.9926470588235294,
-    "recall": 0.9926470588235294,
-    "f1-score": 0.9926470588235294,
-    "support": 136
+    "precision": 0.9925925925925926,
+    "recall": 0.9925925925925926,
+    "f1-score": 0.9925925925925926,
+    "support": 135
   },
   "macro avg": {
     "precision": 0.98989898989899,
     "recall": 0.9935064935064936,
-    "f1-score": 0.9912854030501088,
-    "support": 136
+    "f1-score": 0.991285403050109,
+    "support": 135
   },
   "weighted avg": {
-    "precision": 0.9934640522875817,
-    "recall": 0.9926470588235294,
-    "f1-score": 0.9927271562219661,
-    "support": 136
+    "precision": 0.9934156378600824,
+    "recall": 0.9925925925925926,
+    "f1-score": 0.9926732833050917,
+    "support": 135
   }
 }

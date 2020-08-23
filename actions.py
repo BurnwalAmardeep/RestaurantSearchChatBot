@@ -84,8 +84,8 @@ class EmailService(Action):
     def __init__(self):
         self.smtp_host = 'smtp.gmail.com'
         self.smtp_port = 25
-        self.team_foodie_email = 'FoodieHimAmar@gmail.com'
-        self.team_foodie_pwd = 'HimAmar@007'
+        self.team_foodie_email = '<chatbot_email>'
+        self.team_foodie_pwd = '<chatbot_email_pwd>'
         self.email_subject = 'List of top 10 restaurants for your hunger'
         self.msg_success = 'Mail sent to the email. Have a good day.'
         self.msg_failure = 'Sorry,  we are unable to send the mail. Please try again in sometime.'
@@ -101,7 +101,7 @@ class EmailService(Action):
         
     
     def get_restaurants(self,tracker):
-        config={ "user_key":"b56f808eeca06454bf8c0b3e2186e70f"}
+        config={ "user_key":"<your_user_key>"}
         zomato = zomatopy.initialize_app(config)
         loc = tracker.get_slot('location')
         cuisine = tracker.get_slot('cuisine')
@@ -185,17 +185,17 @@ class EmailService(Action):
 
         final_message = self.prepare_message(restaurants)
         ##print(final_message)
-        try:
+        #try:
         smtp_server = self.set_up_email_server()
-        except:
-            print(msg_failure)
+        #except:
+        #    print(msg_failure)
         
-        try:
+        #try:
         thr = Thread(target=self.trigger_email, args=[smtp_server, self.cust_email,final_message])
         thr.start()
-        self.trigger_email(smtp_server, self.cust_email, final_message)
-        except:
-            print(msg_failure)
+        #self.trigger_email(smtp_server, self.cust_email, final_message)
+        #except:
+        #    print(msg_failure)
 
         return
         
