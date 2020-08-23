@@ -105,5 +105,5 @@ The bot takes the following inputs from the user:
   - Run command rasa run actions
   - Open one more terminal, enable virtual environment and go inside the folder where the project is stored, and run command rasa shell(make sure the action server is running)
   
-  
-  
+#### Sample Output from Command Prompt
+![alt text](SampleOutput.jpg)
